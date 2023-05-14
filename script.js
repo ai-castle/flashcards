@@ -4,6 +4,7 @@
 // List with handle
 var sortable = Sortable.create(listWithHandle, {
   handle: '.glyphicon-move',
+  swapThreshold: 1,
   animation: 150,
   onEnd: function(event) {
     console.log('순서가변경됨');
@@ -58,3 +59,18 @@ function getDragAfterElement(container, x) {
     { offset: Number.NEGATIVE_INFINITY },
   ).element;
 }
+
+
+
+
+const edits = document.querySelectorAll('.glyphicon-pencil');
+console.log(edits)
+
+edits.forEach(edit => {
+    edit.addEventListener("click", (event) => {
+      let inputText = prompt();
+      console.log(inputText)
+      console.log(event.target)
+      console.log(event.target.previousElementSibling.textContent) = inputText
+    });
+});
