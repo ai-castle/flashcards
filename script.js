@@ -63,14 +63,12 @@ function getDragAfterElement(container, x) {
 
 
 
-const edits = document.querySelectorAll('.glyphicon-pencil');
+var edits = document.querySelectorAll('.glyphicon-pencil');
 console.log(edits)
 
 edits.forEach(edit => {
     edit.addEventListener("click", (event) => {
-      let inputText = prompt();
-      console.log(inputText)
-      console.log(event.target)
-      console.log(event.target.previousElementSibling.textContent) = inputText
+      let inputText = prompt("단어장 이름", event.target.previousElementSibling.textContent);
+      event.target.previousElementSibling.textContent = inputText
     });
 });
