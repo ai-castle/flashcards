@@ -1,4 +1,13 @@
 body {
+    margin: 10px;
+  }
+  
+  .glyphicon-move {
+    cursor: move;
+    cursor: -webkit-grabbing;
+  }
+
+body {
     margin: 0;
     padding: 0;
     background-color: #3d4e56fa;

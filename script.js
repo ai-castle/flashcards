@@ -1,3 +1,18 @@
+// Simple list
+// Sortable.create(simpleList, { /* options */ });
+
+// List with handle
+var sortable = Sortable.create(listWithHandle, {
+  handle: '.glyphicon-move',
+  animation: 150,
+  onEnd: function(event) {
+    console.log('순서가변경됨');
+    var sortedItems = sortable.toArray();
+    console.log(sortedItems);
+  }
+});
+
+
 const draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".container");
 
