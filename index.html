@@ -6,72 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="style.css" rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <ul class="nav nav-pills navbar navbar-default navbar-fixed-top">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">게시판</a></li>
-      <li role="presentation" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-          aria-haspopup="true" aria-expanded="false"> 단어장 목록 <span class="caret"></span> </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">Python</a></li>
-          <li><a href="#">Tensorflow</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">단어장 추가</a></li>
-        </ul>
-      </li>
-    </ul>
+
+  
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
+        단어장
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link disabled">Disabled</a>
+        </div>
+      </div>
+    </div>
   </nav>
       <!-- List with handle -->
-  <main style="margin-top:50px;">
-      <div id="listWithHandle" class="list-group container" >
+  <main>
+      <div id="listWithHandle" class="list-group" >
 
-        <div class="list-group-item" style="margin:10px; background-color:aliceblue">
+        <div class="card list-group-item" draggable="true" style="padding:10px; margin:10px; background-color:aliceblue; border-top-width:5px">
             <div style="display:flex; justify-content: space-between;">
-              <span class="glyphicon glyphicon-move" aria-hidden="true"></span>
-              <span class="badge">14</span>
+              <span class="bi bi-arrows-move" aria-hidden="true"></span>
+              <span class="badge text-bg-secondary">42</span>
             </div>
             <div style="display:flex; justify-content: center; align-items:center;">
-              <h2 style="text-align: center;">JavaScrfdsfdsfipt</h2>
-              <button type="button" class="btn btn-link glyphicon glyphicon-pencil" style="position:relative; top: 0px; left:10px;"></button>
+              <h3 class="card-title" style="text-align: center;">JavaScrfdsfdsfipt</h3>
+              <button type="button" class="btn btn-link bi bi-pencil-fill" style="position:relative; top: 0px; left:5px;" data-bs-toggle="modal" data-bs-target="#cardModal" ></button>
             </div>
             <div style="display:flex; justify-content:center;">
               <button type="button" class="btn btn-primary" style="margin:10px 20px; font-weight: bold;">단어장</button>
               <button type="button" class="btn btn-success" style="margin:10px 20px; font-weight: bold;">학습 게임</button>
-              <!-- <span class="glyphicon glyphicon-pencil " aria-hidden="true"></span> -->
             </div>
+            <i class="bi bi-trash-fill" style="position: absolute; bottom: 10px; right: 10px;"></i>
         </div>
 
-        <div class="list-group-item" style="margin:10px; background-color:aliceblue">
-            <div style="display:flex; justify-content: space-between;">
-              <span class="glyphicon glyphicon-move" aria-hidden="true"></span>
-              <span class="badge">14</span>
-            </div>
-            <div style="display:flex; justify-content: center; align-items:center;">
-              <h2 style="text-align: center;">JavaScrfdsfdsfipt</h2>
-              <button type="button" class="btn btn-link glyphicon glyphicon-pencil" style="position:relative; top: 0px; left:10px;"></button>
-            </div>
-            <div style="display:flex; justify-content:center;">
-              <button type="button" class="btn btn-primary" style="margin:10px 20px; font-weight: bold;">단어장</button>
-              <button type="button" class="btn btn-success" style="margin:10px 20px; font-weight: bold;">학습 게임</button>
-              <!-- <span class="glyphicon glyphicon-pencil " aria-hidden="true"></span> -->
-            </div>
-        </div>
+        <div class="card list-group-item" draggable="true" style="padding:10px; margin:10px; background-color:aliceblue; border-top-width:5px">
+          <div style="display:flex; justify-content: space-between;">
+            <span class="bi bi-arrows-move" aria-hidden="true"></span>
+            <span class="badge text-bg-secondary">42</span>
+          </div>
+          <div style="display:flex; justify-content: center; align-items:center;">
+            <h3 class="card-title" style="text-align: center;">JavaScrfdsfdsfipt</h3>
+            <button type="button" class="btn btn-link bi bi-pencil-fill" style="position:relative; top: 0px; left:5px;" data-bs-toggle="modal" data-bs-target="#cardModal" ></button>
+          </div>
+          <div style="display:flex; justify-content:center;">
+            <button type="button" class="btn btn-primary" style="margin:10px 20px; font-weight: bold;">단어장</button>
+            <button type="button" class="btn btn-success" style="margin:10px 20px; font-weight: bold;">학습 게임</button>
+          </div>
+          <i class="bi bi-trash-fill" style="position: absolute; bottom: 10px; right: 10px;"></i>
+      </div>
 
-        
+ 
     </div>
+
+    <p style="text-align: center;">
+      <button id="add-card" type="button" class="btn btn-link bi bi-plus-square" style="font-size: 4rem;" data-bs-toggle="modal" data-bs-target="#cardModal"> </button>
+    </p>
   </main>
+  
+
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button> -->
+
+  <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="cardModalLabel">New message</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="flashcard-name">
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="submit-card">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
