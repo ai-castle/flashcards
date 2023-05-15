@@ -1,7 +1,7 @@
 
 // List with handle
 var sortable = Sortable.create(listWithHandle, {
-//   handle: '.bi-arrows-move',
+  handle: '.bi-arrows-move',
   animation: 150,
   onEnd: function(event) {
     console.log('순서가변경됨');
