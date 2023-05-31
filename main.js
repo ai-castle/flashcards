@@ -1,4 +1,56 @@
 
+function signIn(){
+  let oauth2Endpoint = "https://accounts.google.com/o/oauth2/v2/auth";
+
+  let form = document.createElement('form');
+  form.setAttribute('method', 'GET');
+  form.setAttribute('action', oauth2Endpoint);
+
+  let params = {
+    "client_id":"218511138494-r9tg3tm80vq1sdj546v9gatppoqf50io.apps.googleusercontent.com",
+    "redirect_uri":"http://localhost:8000",
+    "response_type":"token",
+    "scope":"https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/drive",
+    "include_granted_scopes":'true',
+    "state":"pass-through-value",
+  }
+
+  for(var p in params){
+    var input = document.createElement('input');
+    input.setAttribute('type','hidden');
+    input.setAttribute('name',p);
+    input.setAttribute('value',params[p]);
+    form.appendChild(input);
+  }
+  
+  document.body.appendChild(form);
+
+  form.submit();
+}
+
+
+// let params = {}
+
+// let regex = /([^&=]+)=([^&]*)/g, m
+
+// while(m = regex.exec(location.href)){
+//   params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+// }
+
+// if(Object.keys(params).length >0){
+//   localStorage.setItem('authInfo',JSON.stringify(params));
+// }
+
+// // hide the access token
+
+// window.history.pushState({}, document.title, "/" + "profile.html");
+
+// let info = JSON.parse(localStorage.getItem('authInfo'));
+// console.log(JSON.parse(localStorage.getItem('authInfo')));
+// console.log(info['access_token']);
+// console.log(info['expires_in']);
+
+
 let googleResponse;
 function handleCredentialResponse(response) {
   console.log(response);

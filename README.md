@@ -13,6 +13,7 @@
     - Oauth2 Google Access Token in Browser
       - <https://www.youtube.com/watch?v=bOd4eFqIg00>
       - <https://webninjadeveloper.com/javascript/javascript-oauth2-google-login-logout-example-using-access-token-in-browser/>
+      - <https://developers.google.com/oauthplayground/>
     - gdrive
       - <https://www.youtube.com/watch?v=7_Nj7sDbBvg>
       - <https://webninjadeveloper.com/javascript/javascript-oauth2-google-drive-api-example-to-search-images-videos-delete-specific-file-in-browser/>
